@@ -1,0 +1,62 @@
+/* Adding font sizes for the h1, h2, and h3 elements*/
+h1 {
+  font-size: 60px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: left;
+}
+
+
+h3 {
+  font-size: 20px;
+  text-align: left;
+}
+
+/* Centering the Mars Hemisphers header */
+.hemisphere_header {
+  text-align: left
+}
+
+/* Styling the table */
+.table_head {
+  padding: .2em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.table_row {
+  padding-left: .5em;
+  padding-right: .5em;
+  text-align: center;
+  background-color: #fff
+}
+
+.table_row_alternate {
+  padding-left: .5em;
+  padding-right: .5em;
+  text-align: center;
+  background-color: #ffc
+}
+
+/* formatting for the p elements */
+p {
+  font-size: 20px;
+  display: inline-block;
+  padding: 25px;
+  margin-right: 5px;
+  margin-left: 5px;
+  text-align: left;
+}
+
+/* to resize images when browser window changes size */
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+
+
+

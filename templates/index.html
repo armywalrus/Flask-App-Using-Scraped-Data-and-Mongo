@@ -5,29 +5,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Test</title>
+  <title>Mission to Mars!</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
   <div class="container-fluid">
     <div class="jumbotron text-center">
-      <h1>See the...</h1>
-      <p>Hemispheres of Mars</p>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
-    <p> {{mars_data.news_title}} </p>
-    <p> {{mars_data.news_paragraph}} </p>
-    <img src= "{{mars_data.featured_image}}" alt = "alt"> </img>
-    <p>{{mars_data.table|safe}}</p>
-    <img src= "{{mars_data.cerberus}}" alt = "alt"> </img>
-    <img src= "{{mars_data.schiaparelli}}" alt = "alt"> </img>
-    <img src= "{{mars_data.syrtis}}" alt = "alt"> </img>
-    <img src= "{{mars_data.valles_marineris}}" alt = "alt"> </img>
 
+  <!-- Latest Headline and Paragraph -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Latest News on Mars:</h1>
+        <h3>{{mars_data.news_title}}</h3>
+        <p>{{mars_data.news_paragraph}}</p>
+      </div>
+    </div>
+
+  <!-- For spacing -->
+   <div class="row">
+    <div class="col-md-12">
+     <br><br>
+    </div>
   </div>
+</div>
+
+
+  <!-- Featured Image -->
+<div class="container">
+  <div class="row">
+
+      <div class="col-md-7">
+        <h1>Featured Mars Image</h1><br>
+        <img class="responsive" src= "{{mars_data.featured_image}}" alt = "Featured Mars Image" width="740" height="500"> </img>
+      </div>
+
+      <div class="col-md-1">
+      </div>
+
+
+    <!-- Table of Mars Facts -->
+      <div class="col-md-4">
+        <h3>Mars Facts</h3><br>
+        <p>{{mars_data.table|safe}}</p>
+      </div>
+    </div>
+
+    <!-- For spacing -->
+   <div class="row">
+      <div class="col-md-12">
+       <br><br>
+      </div>
+    </div>
   </div>
+
+    <!-- Hemisphere Images -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <br>
+      </div>
+      
+      <div class="col-md-2">
+       <br>
+      </div>
+
+      <div class="col-md-8">
+        <h1 class = "hemisphere_header">&nbsp;Mars Hemispheres</h1><br>
+      </div>
+
+      <div class="col-md-1">
+        <br>
+      </div>
+    </div>  
+
+    <div class="row">
+      <div class="col-md-6">
+        <img class="responsive" src= "{{mars_data.cerberus}}" alt = "Cerberus Hemisphere Enhanced" width="512" height="512"> </img>
+        <h3>Cerberus Hemisphere Enhanced</h3><br>
+      </div>
+
+      <div class="col-md-6">
+        <img class="responsive" src= "{{mars_data.schiaparelli}}" alt = "Schiaparelli Hemisphere Enhanced" width="512" height="512"> </img>
+        <h3>Schiaparelli Hemisphere Enhanced</h3><br>
+      </div>
+    </div>  
+
+    <div class="row">
+      <div class="col-md-6">
+        <img class="responsive" src= "{{mars_data.syrtis}}" alt = "Syrtis Hemisphere Enhanced" width="512" height="512"> </img>
+        <h3>Syrtis Hemisphere Enhanced</h3><br>
+      </div>
+
+      <div class="col-md-6">
+        <img class="responsive" src= "{{mars_data.valles_marineris}}" alt = "Valles Marineris Hemisphere Enhanced" width="512" height="512"> </img>
+        <h3>Valles Marineris Hemisphere Enhanced</h3><br>
+      </div>
+    </div> 
+  </div> 
+
 </body>
 
 </html>
+
+
+
+
+    <!-- <p> {{mars_data.news_title}} </p>
+    <p> {{mars_data.news_paragraph}} </p>
+    <img src= "{{mars_data.featured_image}}" alt = "alt"> </img>
+    <p>{{mars_data.table|safe}}</p>
+    <img src= "{{mars_data.cerberus}}" alt = "Cerberus Hemisphere"> </img>
+    <img src= "{{mars_data.schiaparelli}}" alt = "Schiaparelli Hemisphere"> </img>
+    <img src= "{{mars_data.syrtis}}" alt = "Syrtis Hemisphere"> </img>
+    <img src= "{{mars_data.valles_marineris}}" alt = "Valles Marineris Hemisphere"> </img> -->
 
