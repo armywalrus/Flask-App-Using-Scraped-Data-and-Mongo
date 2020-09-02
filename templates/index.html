@@ -5,25 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Surfing</title>
+  <title>Test</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
-  <div clas="container">
+  <div class="container-fluid">
     <div class="jumbotron text-center">
-      <h1>Scrape Test</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">cerebrusimage</a></p>
+      <h1>See the...</h1>
+      <p>Hemispheres of Mars</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
     </div>
-      
-    <!-- mars data -->
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <p>{{ mars_hemisphere}}</p>
-      </div>
-    </div>
+    <img src="{{ mars_data.cerberus_img }}" alt="Sloth">
   </div>
-
+  </div>
 </body>
+
 </html>
 

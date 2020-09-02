@@ -1,22 +1,24 @@
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
-import mars_scrape
+import new_scrape
 
 app = Flask(__name__)
 
-app.config["MONGO_URI"] = "mongodb://localhost:27017/craigslist_app"
+app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
 mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    mars_hemisphere = mongo.db.mars_hemisphere.find_one()
-    return render_template("index.html", mars_hemisphere=mars_hemisphere)
+    # Find one record of data from the mongo database
+    mars_data = mongo.db.collection.find_one()
+
+    # Return template and data
+    return render_template("index.html", image=mars_data)
 
 @app.route("/scrape")
 def scraper():
-    mars_hemisphere = mongo.db.mars_hemisphere
-    mars_hemisphere_datum = mars_scrape.scrape()
-    mars_hemisphere.update({}, mars_hemisphere_datum, upsert=True)
+    mars_hemisphere = new_scrape.init_browser()
+    mongo.db.collection.update({}, mars_hemisphere, upsert=True)
     return redirect("/", code=302)
 
 
