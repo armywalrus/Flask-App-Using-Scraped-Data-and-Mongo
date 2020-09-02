@@ -16,14 +16,14 @@
       <p>Hemispheres of Mars</p>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
     </div>
-    <p> {{image.newstitle}} </p>
-    <p> {{image.newsparagraph}} </p>
-    <img src= "{{image.featured_image}}" alt = "alt"> </img>
-    <p>{{image.table}}</p>
-    <img src= "{{image.cerberus}}" alt = "alt"> </img>
-    <img src= "{{image.schiaparelli}}" alt = "alt"> </img>
-    <img src= "{{image.syrtis}}" alt = "alt"> </img>
-    <img src= "{{image.valles_marineris}}" alt = "alt"> </img>
+    <p> {{mars_data.newstitle}} </p>
+    <p> {{mars_data.newsparagraph}} </p>
+    <img src= "{{mars_data.featured_image}}" alt = "alt"> </img>
+    <p> {{mars_data.table|safe}} </p>
+    <img src= "{{mars_data.cerberus}}" alt = "alt"> </img>
+    <img src= "{{mars_data.schiaparelli}}" alt = "alt"> </img>
+    <img src= "{{mars_data.syrtis}}" alt = "alt"> </img>
+    <img src= "{{mars_data.valles_marineris}}" alt = "alt"> </img>
 
   </div>
   </div>

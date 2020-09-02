@@ -49,7 +49,7 @@ def init_browser():
     mars_column_two = (tables[0][1])
     mars_facts = pd.DataFrame({"Attributes": mars_column_one,
                           " Mars Values": mars_column_two})
-    html_table = mars_facts.to_html()
+    mars_table = mars_facts.to_html(classes=['table_head', 'table_row', 'table_row_alternate', 'table_header'], index=False)
 
 
     # Obtain high resolution images for each of Mar's hemispheres.
@@ -106,7 +106,7 @@ def init_browser():
     mars_news_dict = {"newstitle": title,
             "newsparagraph":  paragraph,
             "featured_image": featured_image_url,
-            "table": html_table,
+            "table": mars_table,
             "cerberus": cerberus_image_url,
             "schiaparelli": schiaparelli_image_url,
             "syrtis": syrtis_image_url,

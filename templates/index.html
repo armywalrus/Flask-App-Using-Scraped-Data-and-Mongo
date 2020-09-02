@@ -16,7 +16,15 @@
       <p>Hemispheres of Mars</p>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
     </div>
-    <img src="{{ mars_data.cerberus_img }}" alt="Sloth">
+    <p> {{mars_data.news_title}} </p>
+    <p> {{mars_data.news_paragraph}} </p>
+    <img src= "{{mars_data.featured_image}}" alt = "alt"> </img>
+    <p>{{mars_data.table|safe}}</p>
+    <img src= "{{mars_data.cerberus}}" alt = "alt"> </img>
+    <img src= "{{mars_data.schiaparelli}}" alt = "alt"> </img>
+    <img src= "{{mars_data.syrtis}}" alt = "alt"> </img>
+    <img src= "{{mars_data.valles_marineris}}" alt = "alt"> </img>
+
   </div>
   </div>
 </body>

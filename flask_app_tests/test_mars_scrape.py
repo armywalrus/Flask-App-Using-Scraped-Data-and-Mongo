@@ -41,11 +41,6 @@ def cerebrusscrape():
     cerberus_image_path = cerberus_soup.find_all('img')[5]["src"]
     cerberus_base_url = "https://astrogeology.usgs.gov"
     cerberus_img = cerberus_base_url + cerberus_image_path
-    return cerberus_img    
-
-def schiaparelliscrape():
-    browser = init_browser()
-    
     
     # Schiaparelli Hemisphere
     # Define and open URL of page to be scraped
@@ -58,12 +53,6 @@ def schiaparelliscrape():
     schiaparelli_image_path = schiaparelli_soup.find_all('img')[5]["src"]
     schiaparelli_base_url = "https://astrogeology.usgs.gov"
     schiaparelli_img = schiaparelli_base_url + schiaparelli_image_path
-    return schiaparelli_img    
-
-
-def syrtisscrape():
-    browser = init_browser()
-
     
     # Syrtis Hemisphere
     # Define and open URL of page to be scraped
@@ -76,12 +65,6 @@ def syrtisscrape():
     syrtis_image_path = syrtis_soup.find_all('img')[5]["src"]
     syrtis_base_url = "https://astrogeology.usgs.gov"
     syrtis_img = syrtis_base_url + syrtis_image_path
-    return syrtis_img    
-
-
-def valles_marinerisscrape():
-    browser = init_browser()
-    
     
     # Valles Marineris Hemisphere
     # Define and open URL of page to be scraped
