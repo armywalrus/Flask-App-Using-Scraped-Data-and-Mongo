@@ -49,7 +49,7 @@ def init_browser():
     mars_column_two = (tables[0][1])
     mars_facts = pd.DataFrame({"Attributes": mars_column_one,
                           " Mars Values": mars_column_two})
-    mars_table = mars_facts.to_html(classes=['table_head', 'table_row', 'table_row_alternate', 'table_header'], index=False)
+    mars_table = mars_facts.to_html(classes='card-table', index=False)
 
 
     # Obtain high resolution images for each of Mar's hemispheres.

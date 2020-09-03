@@ -52,8 +52,12 @@
 
     <!-- Table of Mars Facts -->
       <div class="col-md-4">
-        <h3>Mars Facts</h3><br>
-        <p>{{mars_data.table|safe}}</p>
+        <div class="card" style="width: 40rem;">
+          <div class="card-body">
+            <h3 class="card-title">Mars Facts</h3><br>
+            <p class="card-subtitle">{{mars_data.table|safe}}</p>
+          </div>  
+        </div>
       </div>
     </div>
 
